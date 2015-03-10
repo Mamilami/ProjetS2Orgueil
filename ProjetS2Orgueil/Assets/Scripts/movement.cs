@@ -13,7 +13,7 @@ public class movement : MonoBehaviour {
 
     void start()
     {
-        print(transform.rigidbody2D.velocity);
+        print(transform.GetComponent<Rigidbody2D>().velocity);
     }
 	
 	// Update is called once per frame
@@ -49,6 +49,7 @@ public class movement : MonoBehaviour {
     public void escalier()
     {
         state = (int)stateMachine.orderEscalier;
+        this.gameObject.layer = 12;
     }
 
     public enum comportement
@@ -80,13 +81,6 @@ public class movement : MonoBehaviour {
             {
                 Debug.Log(col.gameObject.transform.position.y+" "+transform.position.y);
               transform.position = transform.position + new Vector3(0.0f, 1.2f, 0.0f);
-            }
-            else
-            {
-                vit = -vit;
-                lastVit = vit;
-                vitesse = new Vector2(vit, 0.0f);
-                transform.Rotate(0.0f, 180.0f, 0.0f);
             }
         }
         
