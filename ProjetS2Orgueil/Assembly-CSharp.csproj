@@ -46,13 +46,17 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\MinionInteraction.cs" />
      <Compile Include="Assets\Scripts\Mouse.cs" />
+     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\PreventFallScript.cs" />
+     <Compile Include="Assets\Scripts\ScreenTapPlayer.cs" />
      <Compile Include="Assets\Scripts\movement.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="TouchScript">
- <HintPath>C:/Users/guillaume/Desktop/Isart/Mamilami/ProjetS2Orgueil/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
+ <HintPath>D:/GitHub/ProjetS2Orgueil/ProjetS2Orgueil/ProjetS2Orgueil/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
