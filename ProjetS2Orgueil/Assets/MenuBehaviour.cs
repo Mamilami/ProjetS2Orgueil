@@ -6,6 +6,7 @@ public class MenuBehaviour : MonoBehaviour {
     public Transform escalier;
     public Transform mur;
     public Transform pont;
+    public Transform retour;
 	// Use this for initialization
 	void Start () {
         ResetMenu(false);
@@ -52,6 +53,7 @@ public class MenuBehaviour : MonoBehaviour {
         escalier.gameObject.SetActive(toggle);
         mur.gameObject.SetActive(toggle);
         pont.gameObject.SetActive(toggle);
+        retour.gameObject.SetActive(toggle);
         Deactivate();
     }
 

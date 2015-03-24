@@ -150,21 +150,16 @@ public class MinionInteraction : MonoBehaviour {
         gesture.GetTargetHitResult(out hit);
 
         var hit2d = hit as ITouchHit2D;
-        StartCoroutine("countTime");
         
     }
 
     private void releasedHandler(object sender, EventArgs e)
     {
-        //release();
-        StopCoroutine("countTime");
-        if(time>0.2f)
-        {
+        
             if (comport == (int)comportement.marche)
             {
                 GameObject.Find("ChoiceMenu").GetComponent<MenuBehaviour>().Activate(this.transform);
             }
-        }
         else
         {
             if (comport == (int)comportement.peur)
@@ -172,17 +167,5 @@ public class MinionInteraction : MonoBehaviour {
                 go();
             }
         }
-        print("le temps est de " + time);
-    }
-
-    public IEnumerator countTime()
-    {
-        time=0.0f;
-        while(true)
-        {
-            time += Time.deltaTime;
-            yield return null; 
-        }
-        
     }
 }
