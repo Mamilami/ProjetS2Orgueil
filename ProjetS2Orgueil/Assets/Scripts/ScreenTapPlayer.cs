@@ -42,12 +42,12 @@ public class ScreenTapPlayer : MonoBehaviour {
             axis = 1;
         }
         else if (hit2d.Point.x + deadZone < 0) {
+            
             axis = -1;
         }
         else {
             axis = 0;
         }
-        
         StartCoroutine("MovePlayer");
     }
 
